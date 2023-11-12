@@ -5,4 +5,4 @@ riderModule.iml
 /_ReSharper.Caches/
 .idea/
 .DS_Store
-/src/.vs/MewsBenchmarks/FileContentIndex
+.vs/
