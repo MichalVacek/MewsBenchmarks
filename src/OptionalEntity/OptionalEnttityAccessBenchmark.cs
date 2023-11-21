@@ -36,8 +36,13 @@ public class OptionalEnttityAccessBenchmark
     [Benchmark]
     public Guid? FuncSharpEntityAccessV3()
     {
-
         return PrimaryEntity.OptionalEntity.GetOrNull()?.OptionalEntity.GetOrNull()?.Id;
+    }
+
+    [Benchmark]
+    public Guid? FuncSharpEntityAccessV4()
+    {
+        return PrimaryEntity.OptionalEntity.ToNullable(e => e.OptionalEntity.ToNullable(e2 => e2.Id));
     }
 
     [Benchmark]
